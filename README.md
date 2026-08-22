@@ -1,5 +1,3 @@
-README
-
 Notes, reminders, and references for every programming language and technology I have learned.
 - Godot
 - Python
