@@ -1,6 +1,7 @@
-### Notes, reminders, and references for every programming language and technology I have learned or hope to learn.
-### Programming concepts, syntax, commands, or anything i find useful.
-### Continuously updated.
+### Description
+• Notes, reminders, and references for every programming language and technology I have learned or hope to learn.
+• Programming concepts, syntax, commands, or anything i find useful.
+• Continuously updated.
 
 ### Languages & Technologies
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
@@ -17,6 +18,6 @@
 ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
 ![Raspberry Pi](https://img.shields.io/badge/-Raspberry_Pi-C51A4A?style=for-the-badge&logo=Raspberry-Pi)
 ![Godot Engine](https://img.shields.io/badge/GODOT-%23FFFFFF.svg?style=for-the-badge&logo=godot-engine)
-
+<!-- Icons by https://gprm.itsvg.in/ -->
 ### License
 © 2026 Vaurel. Licensed under CC BY 4.0.
