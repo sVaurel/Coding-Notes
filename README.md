@@ -1,6 +1,6 @@
-###Notes, reminders, and references for every programming language and technology I have learned or hope to learn.
-###Programming concepts, syntax, commands, or anything i find useful.
-###Continuously updated.
+### Notes, reminders, and references for every programming language and technology I have learned or hope to learn.
+### Programming concepts, syntax, commands, or anything i find useful.
+### Continuously updated.
 
 ### Languages & Technologies
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
