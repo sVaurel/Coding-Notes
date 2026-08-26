@@ -1,0 +1,537 @@
+extends Node
+
+# =============================================================================
+# GDSCRIPT NOTES / REFERENCE
+# =============================================================================
+
+
+# =============================================================================
+# VARIABLES
+# =============================================================================
+
+# Variables store information.
+var health: int = 100
+var player_name: String = "Player"
+var speed: float = 5.0
+var is_alive: bool = true
+
+
+# =============================================================================
+# DATA TYPES
+# =============================================================================
+
+# int = whole numbers.
+var score: int = 100
+
+# float = numbers with decimals.
+var movement_speed: float = 5.5
+
+# String = text.
+var message: String = "Hello"
+
+# bool = true or false.
+var is_running: bool = false
+
+# Vector2 = two-dimensional coordinates or directions.
+var direction_2d: Vector2 = Vector2.ZERO
+
+# Vector3 = three-dimensional coordinates or directions.
+var direction_3d: Vector3 = Vector3.ZERO
+
+
+# =============================================================================
+# CONSTANTS
+# =============================================================================
+
+# Constants cannot be changed after they are created.
+const MAX_HEALTH: int = 100
+const GRAVITY: float = 9.8
+
+
+# =============================================================================
+# OPERATORS
+# =============================================================================
+
+# Addition: +
+# Subtraction: -
+# Multiplication: *
+# Division: /
+# Remainder: %
+
+var addition = 5 + 5
+var subtraction = 10 - 5
+var multiplication = 5 * 5
+var division = 10 / 2
+var remainder = 10 % 3
+
+# += adds and assigns.
+score += 1
+
+# -= subtracts and assigns.
+health -= 10
+
+
+# =============================================================================
+# COMPARISON OPERATORS
+# =============================================================================
+
+# == Equal
+# != Not equal
+# > Greater than
+# < Less than
+# >= Greater than or equal
+# <= Less than or equal
+
+
+# =============================================================================
+# LOGICAL OPERATORS
+# =============================================================================
+
+# and = both conditions must be true.
+# or = at least one condition must be true.
+# not = reverses a boolean.
+
+# Example:
+# if health > 0 and is_alive:
+#     pass
+
+
+# =============================================================================
+# FUNCTIONS
+# =============================================================================
+
+# Functions contain reusable instructions.
+
+func say_hello() -> void:
+	print("Hello")
+
+
+# Parameters receive information passed into a function.
+
+func take_damage(damage: int) -> void:
+	health -= damage
+
+
+# Default parameters have a value if none is provided.
+
+func heal(amount: int = 10) -> void:
+	health += amount
+
+
+# Return values send information back from a function.
+
+func add_numbers(a: int, b: int) -> int:
+	return a + b
+
+
+# =============================================================================
+# CONDITIONALS
+# =============================================================================
+
+func check_health() -> void:
+	if health <= 0:
+		print("Dead")
+	elif health < 50:
+		print("Low health")
+	else:
+		print("Healthy")
+
+
+# =============================================================================
+# MATCH
+# =============================================================================
+
+func check_state(state: String) -> void:
+	match state:
+		"idle":
+			print("Idle")
+		"walking":
+			print("Walking")
+		_:
+			print("Unknown state")
+
+
+# =============================================================================
+# LOOPS
+# =============================================================================
+
+# for repeats through a collection or range.
+
+func loop_example() -> void:
+	for i in range(10):
+		print(i)
+
+
+# while repeats while its condition is true.
+# Be careful not to create an infinite loop.
+
+
+# =============================================================================
+# ARRAYS
+# =============================================================================
+
+var inventory: Array[String] = [
+	"Sword",
+	"Shield",
+	"Potion"
+]
+
+# Arrays start at index 0.
+# inventory[0] is "Sword".
+
+# Add an item.
+# inventory.append("Bow")
+
+# Remove an item.
+# inventory.erase("Potion")
+
+# Get the number of items.
+# inventory.size()
+
+# Check if an item exists.
+# "Sword" in inventory
+
+
+# =============================================================================
+# DICTIONARIES
+# =============================================================================
+
+# Dictionaries store key-value pairs.
+
+var player_data: Dictionary = {
+	"health": 100,
+	"level": 1,
+	"name": "Player"
+}
+
+# Access a value.
+# player_data["health"]
+
+# Change a value.
+# player_data["health"] = 50
+
+
+# =============================================================================
+# ENUMS
+# =============================================================================
+
+# Enums create named values.
+
+enum PlayerState {
+	IDLE,
+	WALKING,
+	RUNNING,
+	JUMPING
+}
+
+var current_state: PlayerState = PlayerState.IDLE
+
+
+# =============================================================================
+# NODES
+# =============================================================================
+
+# Scripts are attached to nodes.
+# A script can access functionality from the node it extends.
+
+# Example:
+# extends Node
+# extends Node2D
+# extends Node3D
+# extends CharacterBody2D
+# extends CharacterBody3D
+
+
+# =============================================================================
+# NODE REFERENCES
+# =============================================================================
+
+# $ is shorthand for get_node().
+
+# Example:
+# var camera = $Camera3D
+
+# @onready waits until the node is ready.
+
+# Example:
+# @onready var camera: Camera3D = $Camera3D
+
+
+# =============================================================================
+# @EXPORT
+# =============================================================================
+
+# @export makes a variable editable in the Inspector.
+
+# Example:
+# @export var speed: float = 5.0
+
+
+# =============================================================================
+# GODOT LIFECYCLE FUNCTIONS
+# =============================================================================
+
+# _ready() runs when the node is ready.
+
+func _ready() -> void:
+	pass
+
+
+# _process(delta) runs every frame.
+# delta is the time since the previous frame.
+
+func _process(delta: float) -> void:
+	pass
+
+
+# _physics_process(delta) runs during physics updates.
+# Commonly used for movement and physics.
+
+func _physics_process(delta: float) -> void:
+	pass
+
+
+# =============================================================================
+# DELTA
+# =============================================================================
+
+# delta helps movement remain consistent across different frame rates.
+
+# Example:
+# position.x += speed * delta
+
+
+# =============================================================================
+# SIGNALS
+# =============================================================================
+
+# Signals allow nodes to communicate when something happens.
+
+signal player_died
+
+
+# Emit a signal:
+# player_died.emit()
+
+# Connect a signal:
+# player_died.connect(_on_player_died)
+
+func _on_player_died() -> void:
+	print("Player died")
+
+
+# =============================================================================
+# INPUT
+# =============================================================================
+
+# Input actions are configured in Project Settings > Input Map.
+
+# Check if an action is currently pressed:
+# Input.is_action_pressed("move_forward")
+
+# Check if an action was just pressed:
+# Input.is_action_just_pressed("jump")
+
+# Check if an action was just released:
+# Input.is_action_just_released("jump")
+
+
+# =============================================================================
+# VECTOR3
+# =============================================================================
+
+# Vector3 is commonly used in 3D games.
+
+# X = left / right
+# Y = up / down
+# Z = forward / backward
+
+# Vector3.ZERO = Vector3(0, 0, 0)
+# Vector3.UP = Vector3(0, 1, 0)
+# Vector3.FORWARD = Vector3(0, 0, -1)
+
+
+# =============================================================================
+# CHARACTERBODY3D
+# =============================================================================
+
+# CharacterBody3D has a velocity property.
+
+# Example:
+# velocity.x = 5.0
+
+# move_and_slide() moves the body and handles collisions.
+
+# Example:
+# move_and_slide()
+
+
+# =============================================================================
+# BASIC 3D MOVEMENT EXAMPLE
+# =============================================================================
+
+# Example only:
+#
+# func handle_movement() -> void:
+#     var direction := Vector3.ZERO
+#
+#     if Input.is_action_pressed("move_forward"):
+#         direction.z -= 1.0
+#
+#     if Input.is_action_pressed("move_backward"):
+#         direction.z += 1.0
+#
+#     velocity = direction * speed
+#     move_and_slide()
+
+
+# =============================================================================
+# AWAIT
+# =============================================================================
+
+# await pauses a function until an event or signal occurs.
+
+# Example:
+# await get_tree().create_timer(1.0).timeout
+
+
+# =============================================================================
+# PRELOAD AND LOAD
+# =============================================================================
+
+# preload() loads a resource when the script is loaded.
+
+# Example:
+# var enemy_scene = preload("res://Enemy.tscn")
+
+# load() loads a resource during runtime.
+
+# Example:
+# var enemy_scene = load("res://Enemy.tscn")
+
+
+# =============================================================================
+# INSTANTIATE
+# =============================================================================
+
+# instantiate() creates an instance of a PackedScene.
+
+# Example:
+# var enemy = enemy_scene.instantiate()
+# add_child(enemy)
+
+
+# =============================================================================
+# QUEUE_FREE
+# =============================================================================
+
+# queue_free() safely removes a node.
+
+# Example:
+# queue_free()
+
+
+# =============================================================================
+# AUTOLOADS
+# =============================================================================
+
+# Autoloads are globally accessible scripts or scenes.
+
+# Common uses:
+# - Game state
+# - Settings
+# - Player data
+# - Scene management
+
+# Example:
+# GameManager.score += 1
+
+
+# =============================================================================
+# RESOURCES
+# =============================================================================
+
+# Resources store reusable data.
+
+# Example custom resource:
+#
+# extends Resource
+# class_name ItemData
+
+
+# =============================================================================
+# STATIC
+# =============================================================================
+
+# Static variables belong to the class rather than an object.
+
+# Example:
+# static var player_count: int = 0
+
+# Static functions belong to the class.
+
+# Example:
+#
+# static func add(a: int, b: int) -> int:
+#     return a + b
+
+
+# =============================================================================
+# NULL
+# =============================================================================
+
+# null means no value or object is assigned.
+
+var target = null
+
+# Example:
+# if target == null:
+#     print("No target")
+
+
+# =============================================================================
+# PASS
+# =============================================================================
+
+# pass does nothing.
+# It can temporarily fill an empty code block.
+
+func example() -> void:
+	pass
+
+
+# =============================================================================
+# DEBUGGING
+# =============================================================================
+
+# print() displays information in Godot's Output panel.
+
+# Example:
+# print("Health: ", health)
+
+# print_debug() provides debugging information.
+
+# Example:
+# print_debug(health)
+
+
+# =============================================================================
+# CORE CONCEPTS
+# =============================================================================
+
+# var       = create a variable.
+# const     = create a constant.
+# func      = create a function.
+# if        = run code when a condition is true.
+# elif      = check another condition.
+# else      = run code when previous conditions are false.
+# match     = compare one value against multiple possibilities.
+# for       = repeat through a collection or range.
+# while     = repeat while a condition is true.
+# return    = send a value back from a function.
+# signal    = create a signal.
+# await     = wait for a signal or event.
+# @export   = expose a variable in the Inspector.
+# @onready  = wait until the node is ready.
+# pass      = do nothing.
+# null      = no value.
