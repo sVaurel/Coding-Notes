@@ -6,10 +6,12 @@ from openai import OpenAI #
 
 client = OpenAI () #client is program using OpenAI
 
-prompt = input("Prompt: ")
+user_prompt = input("Prompt: ")
+system_prompt = "Limit your answer to one sentence."
 
 response = client.responses.create(
-  input="In one sentence, what is CS50?",
+  input=user_prompt,
+  instructions=system_prompt,
   model="gpt-5"
 )
 
