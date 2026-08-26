@@ -1,27 +1,107 @@
-# Week 0 - Scratch
+# Computer Science
 
-# Week 1 - C
+### How do I solve this problem?
+### What steps are necessary?
+### Can I solve it more efficiently?
+### How can I simplify a complicated problem?
+### How do I give instructions precisely enough that a computer can follow them?
 
-# Week 2 - Arrays
+## Artificial Intelligence
 
-# Week 3 Algorithms
+### Have enough understanding to:
+- Ask good questions.
+- Recognize whether an answer makes sense.
+- Debug problems.
+- Understand what AI generated.
+- Make decisions yourself.
 
-# Week 4 - Memory
+## Input > Algorithm > Output
 
-# Week 5 - Data Structures
+### Input
+Something you give a computer.
 
-# Week 6 - Python
+### Algorithm
+A step-by-step process that transforms an input into an output.
 
-# Week 7 - SQL
+### Output
+The result produced by the computer.
 
-# Artificial Intelligence
+## Representation
 
-# Week 8 - HTML
+### Bit
+A binary digit that can be either `0` or `1`.
 
-# Week 8 - CSS
+### Binary
+A number system that uses only `0` and `1`.
 
-# Week 8 - JavaScript
+### Byte
+A collection of `8 bits`.
 
-## Week 9 - Flask
+### Binary Place Values
+Each position represents a power of `2`.
 
-## Week 10 - The End
+`128 | 64 | 32 | 16 | 8 | 4 | 2 | 1`
+
+### ASCII
+A system that represents characters using numbers.
+
+### Unicode
+A larger system for representing characters, symbols, and emoji.
+
+### RGB
+Represents colors using:
+- Red
+- Green
+- Blue
+
+### Pixel
+A small individual dot in an image that stores color information.
+
+## Algorithms
+
+### Algorithm
+A precise step-by-step process for solving a problem.
+
+### Efficiency
+Different algorithms can solve the same problem, but some use less time or resources than others.
+
+### Binary Search
+A search algorithm that repeatedly divides a sorted set of data in half.
+
+## Pseudocode
+
+### Pseudocode
+A human-readable way to plan the logic of a program before writing actual code.
+
+## Programming Concepts
+
+### Function
+A reusable block of code that performs a task.
+
+### Argument
+A value or piece of information given to a function.
+
+### Return Value
+A value produced and returned by a function.
+
+### Variable
+A named container used to store information that can change.
+
+### Boolean
+A value that is either `true` or `false`.
+
+### Conditional
+Allows a program to make decisions based on whether a condition is true or false.
+
+### Loop
+Repeats instructions.
+
+### Event
+An action or occurrence that triggers code.
+
+### Abstraction
+Hides unnecessary complexity behind a simpler interface.
+
+## Key Idea
+
+### Complex programs are built by combining smaller, simpler pieces.
