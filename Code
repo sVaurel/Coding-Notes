@@ -1,35 +1,41 @@
-## Week 0 - Scratch
+# Week 0 - Scratch
 ### Starting OpenAI Activity With Python
 filename.py
+
 from openai import OpenAI #
+
 client = OpenAI () #client is program using OpenAI
+
+prompt = input("Prompt: ")
+
 response = client.responses.create(
   input="In one sentence, what is CS50?",
   model="gpt-5"
 )
+
 print(response.output_text)
 
-## Week 1 - C
+# Week 1 - C
 
-## Week 2 - Arrays
+# Week 2 - Arrays
 
-## Week 3 Algorithms
+# Week 3 Algorithms
 
-## Week 4 - Memory
+# Week 4 - Memory
 
-## Week 5 - Data Structures
+# Week 5 - Data Structures
 
-## Week 6 - Python
+# Week 6 - Python
 
-## Week 7 - SQL
+# Week 7 - SQL
 
-## Artificial Intelligence
+# Artificial Intelligence
 
-## Week 8 - HTML
+# Week 8 - HTML
 
-## Week 8 - CSS
+# Week 8 - CSS
 
-## Week 8 - JavaScript
+# Week 8 - JavaScript
 
 ## Week 9 - Flask
 
